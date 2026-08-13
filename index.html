@@ -24,7 +24,7 @@
         .logo { font-size: 1.5rem; font-weight: 700; color: #000; text-decoration: none; letter-spacing: 0.05em; }
         .logo span { color: var(--color-primary); }
         .global-nav { display: flex; gap: 2rem; font-size: 0.9rem; font-weight: 500; }
-        .global-nav a { color: #000; text-decoration: none; }
+        .global-nav a { color: #000; text-decoration: none; transition: color 0.2s ease; }
         .global-nav a:hover { color: var(--color-primary); }
 
         /* Page Title */
@@ -34,11 +34,18 @@
 
         /* Main Content */
         main { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
-        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; border-left: 5px solid var(--color-primary); padding-left: 1rem; }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; border-left: 5px solid var(--color-primary); padding-left: 1rem; }
+
+        /* Category Tabs */
+        .category-tabs { display: flex; gap: 1rem; margin-bottom: 2.5rem; border-bottom: 2px solid var(--color-border); flex-wrap: wrap; }
+        .tab-btn { background: none; border: none; font-size: 1rem; font-weight: 500; padding: 0.75rem 1.2rem; cursor: pointer; color: var(--color-text-light); transition: all 0.3s ease; border-bottom: 3px solid transparent; margin-bottom: -2px; }
+        .tab-btn:hover { color: #000; }
+        .tab-btn.active { color: var(--color-primary); font-weight: 700; border-bottom: 3px solid var(--color-primary); }
 
         /* News Grid */
         .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
-        .news-card { background: #fff; border: 1px solid var(--color-border); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: box-shadow 0.3s ease; }
+        .news-card { background: #fff; border: 1px solid var(--color-border); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: box-shadow 0.3s ease, transform 0.3s ease; }
+        .news-card.hidden { display: none !important; }
         .news-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .news-image { width: 100%; height: 200px; overflow: hidden; background: #eee; }
         .news-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
@@ -62,8 +69,8 @@
             <a href="index.html" class="logo">TTS <span>CORPORATION</span></a>
             <div class="global-nav">
                 <a href="company.html">企業情報</a>
-                <a href="#">商品・サービス</a>
-                <a href="#">サステナビリティ</a>
+                <a href="index.html?cat=products">商品・サービス</a>
+                <a href="index.html?cat=sustainability">サステナビリティ</a>
                 <a href="index.html">ニュースルーム</a>
             </div>
         </div>
@@ -77,8 +84,15 @@
     <main>
         <h2 class="section-title">最新のニュース</h2>
         
+        <div class="category-tabs">
+            <button class="tab-btn active" data-filter="all">すべて</button>
+            <button class="tab-btn" data-filter="corporate">コーポレート</button>
+            <button class="tab-btn" data-filter="products">商品・サービス</button>
+            <button class="tab-btn" data-filter="sustainability">サステナビリティ</button>
+        </div>
+
         <div class="news-grid">
-            <a href="news-4.html" class="news-card">
+            <a href="news-4.html" class="news-card" data-category="sustainability">
                 <div class="news-image">
                     <img src="./images/news4_natural.jpg" alt="Green IT Initiative">
                 </div>
@@ -91,7 +105,7 @@
                 </div>
             </a>
             
-            <a href="news-1.html" class="news-card">
+            <a href="news-1.html" class="news-card" data-category="corporate">
                 <div class="news-image">
                     <img src="./images/news1_natural.jpg" alt="AI PR Platform">
                 </div>
@@ -104,7 +118,7 @@
                 </div>
             </a>
             
-            <a href="news-2.html" class="news-card">
+            <a href="news-2.html" class="news-card" data-category="products">
                 <div class="news-image">
                     <img src="./images/news2_natural.jpg" alt="New Service Development">
                 </div>
@@ -117,7 +131,7 @@
                 </div>
             </a>
 
-             <a href="news-3.html" class="news-card">
+             <a href="news-3.html" class="news-card" data-category="corporate">
                 <div class="news-image">
                     <img src="./images/news3_natural.jpg" alt="Beta Test">
                 </div>
@@ -135,5 +149,47 @@
     <footer>
         <p class="footer-text">&copy; 2026 TTS Corporation. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.tab-btn');
+            const cards = document.querySelectorAll('.news-card');
+
+            function filterCategory(category) {
+                buttons.forEach(btn => {
+                    if (btn.getAttribute('data-filter') === category) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+
+                cards.forEach(card => {
+                    const cardCat = card.getAttribute('data-category');
+                    if (category === 'all' || cardCat === category) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+                    filterCategory(filter);
+                    const newUrl = filter === 'all' ? 'index.html' : `index.html?cat=${filter}`;
+                    history.replaceState(null, '', newUrl);
+                });
+            });
+
+            // 初期表示時のURLクエリパラメータ (?cat=xxx) 自動読み込み
+            const urlParams = new URLSearchParams(window.location.search);
+            const catParam = urlParams.get('cat');
+            if (catParam) {
+                filterCategory(catParam);
+            }
+        });
+    </script>
 </body>
 </html>
