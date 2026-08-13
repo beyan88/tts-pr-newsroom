@@ -3,29 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>企業情報 | TTS</title>
+    <title>企業情報 | タナベテックシステム開発会社 (TTS)</title>
+    <meta name="description" content="タナベテックシステム開発会社（TTS Corporation）の企業情報・会社概要。2014年創立。次世代AIプラットフォーム開発、広報自動化、CloudflareによるWeb制作を展開。">
+    <meta name="keywords" content="TTS, 会社概要, タナベテックシステム, 田辺広徳, ココナラ, ランサーズ">
+
+    <!-- OGP -->
+    <meta property="og:title" content="企業情報 | タナベテックシステム開発会社 (TTS)">
+    <meta property="og:description" content="TTS Corporation 会社概要。ココナラ・ランサーズにてWebシステム開発・サイト制作をご発注いただけます。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tts-pr-newsroom.pages.dev/company.html">
+
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --color-primary: #e3000f;
+            --color-primary-hover: #c4000d;
             --color-text: #333333;
             --color-text-light: #777777;
             --color-bg: #ffffff;
             --color-bg-gray: #f8f8f8;
             --color-border: #e0e0e0;
+            --color-coconala: #41c9b4;
+            --color-lancers: #2b6cb0;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Noto Sans JP', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; }
         
         /* Header */
-        header { border-bottom: 2px solid var(--color-primary); padding: 0; background: #fff; }
-        .header-inner { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #000; text-decoration: none; letter-spacing: 0.05em; }
+        header { border-bottom: 2px solid var(--color-primary); padding: 0; background: #fff; position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #000; text-decoration: none; letter-spacing: 0.05em; }
         .logo span { color: var(--color-primary); }
-        .global-nav { display: flex; gap: 2rem; font-size: 0.9rem; font-weight: 500; }
-        .global-nav a { color: #000; text-decoration: none; }
+        .global-nav { display: flex; gap: 1.5rem; font-size: 0.9rem; font-weight: 500; align-items: center; }
+        .global-nav a { color: #000; text-decoration: none; transition: color 0.2s ease; }
         .global-nav a:hover { color: var(--color-primary); }
+        .nav-order-btn { background-color: var(--color-primary); color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 700; }
 
         /* Page Title */
         .page-header { background-color: var(--color-bg-gray); padding: 3rem 2rem; text-align: center; border-bottom: 1px solid var(--color-border); }
@@ -39,8 +52,18 @@
         .company-table th, .company-table td { padding: 1rem; border-bottom: 1px solid var(--color-border); text-align: left; }
         .company-table th { width: 30%; background-color: var(--color-bg-gray); font-weight: 700; }
 
+        /* Article CTA Card */
+        .article-cta { background: var(--color-bg-gray); border: 2px solid var(--color-border); border-left: 6px solid var(--color-primary); padding: 2rem; margin-top: 3rem; border-radius: 6px; }
+        .article-cta h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.8rem; }
+        .article-cta p { font-size: 0.95rem; color: var(--color-text); margin-bottom: 1.5rem; line-height: 1.6; }
+        .cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .cta-btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.5rem; font-size: 0.95rem; font-weight: 700; text-decoration: none; border-radius: 4px; color: #fff; transition: opacity 0.2s ease; }
+        .cta-btn:hover { opacity: 0.9; }
+        .cta-btn-coconala { background-color: var(--color-coconala); }
+        .cta-btn-lancers { background-color: var(--color-lancers); }
+
         /* Footer */
-        footer { background: #f1f1f1; padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--color-border); }
+        footer { background: #f1f1f1; padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--color-border); margin-top: 4rem; }
         .footer-text { color: var(--color-text-light); font-size: 0.85rem; }
     </style>
 </head>
@@ -53,6 +76,7 @@
                 <a href="index.html?cat=products">商品・サービス</a>
                 <a href="index.html?cat=sustainability">サステナビリティ</a>
                 <a href="index.html">ニュースルーム</a>
+                <a href="index.html#order-section" class="nav-order-btn">ご依頼（ココナラ/ランサーズ）</a>
             </div>
         </div>
     </header>
@@ -84,6 +108,16 @@
                 </tr>
             </tbody>
         </table>
+
+        <!-- CTA Card -->
+        <div class="article-cta">
+            <h3>システム開発・Web制作のご発注窓口</h3>
+            <p>タナベテックシステム（TTS）へのシステム開発・自動化ツール導入・Webサイト制作のご発注は、安心安全なココナラおよびランサーズにて承っております。</p>
+            <div class="cta-buttons">
+                <a href="https://coconala.com/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-coconala">ココナラで発注する</a>
+                <a href="https://www.lancers.jp/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-lancers">ランサーズで発注する</a>
+            </div>
+        </div>
     </main>
 
     <footer>
