@@ -1,0 +1,7 @@
+Selected Service to Post (URL-driven): EC・オンラインショップ運用自動化システム構築 (ID: ec-operations-automation)
+Generating image via Nano Banana API (gemini-3.1-flash-lite-image)...
+Prompt: A natural, realistic photograph of a modern e-commerce operations office in Japan, computers displaying online shop dashboard and automation workflow, clean professional setting, NO TEXT, NO LOGOS
+Success! Image saved to images/news7_natural.jpg
+Created news-7.html
+Updated index.html with new service card.
+Monday Auto-Publisher (URL-driven deduplication) completed successfully!
