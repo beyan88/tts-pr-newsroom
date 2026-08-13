@@ -9,6 +9,9 @@ except ImportError:
     print("Error: google-genai package is not installed.")
     sys.exit(1)
 
+DEFAULT_COCONALA_URL = "https://coconala.com/users/668648"
+DEFAULT_LANCERS_URL = "https://www.lancers.jp/profile/hirotanabe"
+
 def load_json(filepath):
     if not os.path.exists(filepath):
         return []
@@ -40,6 +43,10 @@ def create_detail_html(service, news_num, date_str):
     filename = f"news-{news_num}.html"
     image_filename = f"images/news{news_num}_natural.jpg"
     
+    # 個別サービスURLが指定されていれば優先使用、無ければデフォルトプロフィールページへ自動フォールバック
+    coconala_target = service.get('coconala_url') or DEFAULT_COCONALA_URL
+    lancers_target = service.get('lancers_url') or DEFAULT_LANCERS_URL
+
     html_content = f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -149,8 +156,8 @@ def create_detail_html(service, news_num, date_str):
                 <h3>{service['title']} のご発注・ご相談</h3>
                 <p>本サービスの受託・ツール導入に関するご発注やご相談は、ココナラおよびランサーズの田辺広徳（TTS）公式ページにて承っております。お気軽にお問い合わせください。</p>
                 <div class="cta-buttons">
-                    <a href="{service['coconala_url']}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-coconala">ココナラ（668648）で発注する</a>
-                    <a href="{service['lancers_url']}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-lancers">ランサーズ（hirotanabe）で発注する</a>
+                    <a href="{coconala_target}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-coconala">ココナラでこのサービスを発注・相談</a>
+                    <a href="{lancers_target}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-lancers">ランサーズでこのサービスを発注・相談</a>
                 </div>
             </div>
         </article>
