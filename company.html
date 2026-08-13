@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>企業情報 | タナベテックシステム開発会社 (TTS)</title>
-    <meta name="description" content="タナベテックシステム開発会社（TTS Corporation）の企業情報。2014年設立。EC・オンラインショップ自動化ツール開発、AIシステム構築を展開。">
-    <meta name="keywords" content="TTS, 会社概要, タナベテックシステム, 田辺広徳, EC自動化, ココナラ 668648, ランサーズ hirotanabe">
+    <meta name="description" content="タナベテックシステム開発会社（TTS Corporation）の企業情報・代表者プロフィール。代表取締役社長 田辺広徳の経歴、著書『脱・労働主義』のご紹介。">
+    <meta name="keywords" content="TTS, 会社概要, 田辺広徳, 脱労働主義, EC自動化, ココナラ 668648, ランサーズ hirotanabe">
 
     <!-- OGP -->
     <meta property="og:title" content="企業情報 | タナベテックシステム開発会社 (TTS)">
-    <meta property="og:description" content="TTS Corporation 会社概要。ココナラ・ランサーズの公式ページにてEC自動化・AIシステム開発をご発注いただけます。">
+    <meta property="og:description" content="TTS Corporation 会社概要および代表者プロフィール。著書『脱・労働主義』Amazon Kindleにて絶賛発売中。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://tts-pr-newsroom.pages.dev/company.html">
 
@@ -25,10 +25,11 @@
             --color-border: #e0e0e0;
             --color-coconala: #41c9b4;
             --color-lancers: #2b6cb0;
+            --color-amazon: #ff9900;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Noto Sans JP', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.7; }
         
         /* Header */
         header { border-bottom: 2px solid var(--color-primary); padding: 0; background: #fff; position: sticky; top: 0; z-index: 100; }
@@ -46,14 +47,36 @@
 
         /* Main Content */
         main { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
-        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; border-left: 5px solid var(--color-primary); padding-left: 1rem; }
-        
-        .company-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin: 3rem 0 1.5rem; border-left: 5px solid var(--color-primary); padding-left: 1rem; }
+        .section-title:first-of-type { margin-top: 0; }
+
+        .company-table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
         .company-table th, .company-table td { padding: 1rem; border-bottom: 1px solid var(--color-border); text-align: left; }
         .company-table th { width: 30%; background-color: var(--color-bg-gray); font-weight: 700; }
 
+        /* Profile Box */
+        .profile-card { background: var(--color-bg-gray); border: 1px solid var(--color-border); padding: 2rem; border-radius: 8px; margin-bottom: 3rem; }
+        .profile-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .profile-title { font-size: 0.95rem; color: var(--color-primary); font-weight: 700; margin-bottom: 1.5rem; }
+        .profile-bio { font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.8; }
+        
+        .history-list { list-style: none; margin-bottom: 1.5rem; border-top: 1px solid var(--color-border); }
+        .history-list li { display: flex; padding: 0.8rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.95rem; }
+        .history-year { width: 140px; font-weight: 700; color: var(--color-text-light); flex-shrink: 0; }
+        .history-desc { flex-grow: 1; }
+
+        /* Book Card */
+        .book-card { background: #fff; border: 2px solid #e0e0e0; border-radius: 8px; padding: 2rem; display: flex; gap: 2rem; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .book-info { flex-grow: 1; }
+        .book-badge { background-color: #000; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; display: inline-block; margin-bottom: 0.5rem; }
+        .book-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.4; }
+        .book-author { font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 1rem; }
+        .book-desc { font-size: 0.95rem; margin-bottom: 1.5rem; color: #444; }
+        .amazon-btn { display: inline-flex; align-items: center; justify-content: center; background-color: #111; color: #fff; text-decoration: none; padding: 0.8rem 1.8rem; font-weight: 700; border-radius: 4px; transition: background-color 0.2s ease; font-size: 0.95rem; }
+        .amazon-btn:hover { background-color: var(--color-amazon); color: #000; }
+
         /* Article CTA Card */
-        .article-cta { background: var(--color-bg-gray); border: 2px solid var(--color-border); border-left: 6px solid var(--color-primary); padding: 2rem; margin-top: 3rem; border-radius: 6px; }
+        .article-cta { background: var(--color-bg-gray); border: 2px solid var(--color-border); border-left: 6px solid var(--color-primary); padding: 2rem; margin-top: 4rem; border-radius: 6px; }
         .article-cta h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.8rem; }
         .article-cta p { font-size: 0.95rem; color: var(--color-text); margin-bottom: 1.5rem; line-height: 1.6; }
         .cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -65,6 +88,12 @@
         /* Footer */
         footer { background: #f1f1f1; padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--color-border); margin-top: 4rem; }
         .footer-text { color: var(--color-text-light); font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .book-card { flex-direction: column; text-align: center; }
+            .history-list li { flex-direction: column; gap: 0.3rem; }
+            .history-year { width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -104,10 +133,55 @@
                 </tr>
                 <tr>
                     <th>代表者</th>
-                    <td>田辺 広徳</td>
+                    <td>代表取締役社長 田辺 広徳</td>
                 </tr>
             </tbody>
         </table>
+
+        <!-- Profile Section -->
+        <h2 class="section-title">代表者プロフィール</h2>
+        <div class="profile-card">
+            <h3 class="profile-name">田辺 広徳</h3>
+            <div class="profile-title">タナベテックシステム開発会社 代表取締役社長 / 著者</div>
+            
+            <p class="profile-bio">
+                大学にて情報システム工学を専攻後、ITセキュリティ分野の専門エンジニアとして高度な技術基盤を構築。その後、経営コンサルティングファームにて多数の企業改革・事業成長プロジェクトを統括。IT技術と企業経営の両面に精通した知見を強みに2014年に独立。現在はAIを活用したEC・オンラインショップの自動化システム開発や業務効率化ソリューションを牽引する。
+            </p>
+
+            <ul class="history-list">
+                <li>
+                    <span class="history-year">2000年3月</span>
+                    <span class="history-desc">大阪工業大学 情報システム学科 卒業</span>
+                </li>
+                <li>
+                    <span class="history-year">2000年4月〜</span>
+                    <span class="history-desc">大手ITセキュリティ企業にて暗号・ネットワークセキュリティエンジニアとして5年間勤務</span>
+                </li>
+                <li>
+                    <span class="history-year">2005年〜</span>
+                    <span class="history-desc">経営コンサルティング企業にて約10年間、企業改革・事業成長プロジェクトを主導</span>
+                </li>
+                <li>
+                    <span class="history-year">2014年4月</span>
+                    <span class="history-desc">独立。タナベテックシステム開発会社（TTS Corporation）を設立し代表取締役社長に就任</span>
+                </li>
+            </ul>
+
+            <!-- Book Box -->
+            <div class="book-card">
+                <div class="book-info">
+                    <span class="book-badge">著書（Amazon Kindle絶賛発売中）</span>
+                    <h4 class="book-title">『脱・労働主義 私たちは、苦しむために生まれてきたわけじゃない』</h4>
+                    <div class="book-author">著者: 田辺 広徳</div>
+                    <p class="book-desc">
+                        テクノロジーとAIが拓く新しい働き方とビジネスのあり方を提唱。時間と労働に縛られない生き方を実現するための思考法を綴った話題の電子書籍。
+                    </p>
+                    <a href="https://www.amazon.co.jp/dp/B0HDYJRPWC" target="_blank" rel="noopener noreferrer" class="amazon-btn">
+                        Amazon Kindleで読む・詳細を見る
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA Card -->
         <div class="article-cta">
