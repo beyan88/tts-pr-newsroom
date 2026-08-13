@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新サービスの開発に関するお知らせ | TTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #e3000f;
+            --color-text: #333333;
+            --color-text-light: #777777;
+            --color-bg: #ffffff;
+            --color-bg-gray: #f8f8f8;
+            --color-border: #e0e0e0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.8; }
+        
+        /* Header */
+        header { border-bottom: 2px solid var(--color-primary); padding: 0; background: #fff; }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #000; text-decoration: none; letter-spacing: 0.05em; }
+        .logo span { color: var(--color-primary); }
+        .global-nav { display: flex; gap: 2rem; font-size: 0.9rem; font-weight: 500; }
+        .global-nav a { color: #000; text-decoration: none; }
+        .global-nav a:hover { color: var(--color-primary); }
+
+        /* Main Content */
+        main { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
+        .article-header { margin-bottom: 3rem; text-align: center; }
+        .article-meta { color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1rem; }
+        .article-title { font-size: 2rem; font-weight: 700; line-height: 1.4; margin-bottom: 2rem; }
+        .article-image { width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 3rem; }
+        .article-body { font-size: 1.05rem; }
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--color-border); }
+        .article-body p { margin-bottom: 1.5rem; }
+
+        /* Footer */
+        footer { background: #f1f1f1; padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--color-border); margin-top: 4rem; }
+        .footer-text { color: var(--color-text-light); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">TTS <span>CORPORATION</span></a>
+            <div class="global-nav">
+                <a href="company.html">企業情報</a>
+                <a href="#">商品・サービス</a>
+                <a href="#">サステナビリティ</a>
+                <a href="index.html">ニュースルーム</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <div class="article-header">
+                <div class="article-meta">2026年8月10日 | 商品・サービス</div>
+                <h1 class="article-title">新サービスの開発に関するお知らせ</h1>
+            </div>
+            
+            <img src="./images/news2_development.jpg" alt="New Service Development" class="article-image">
+            
+            <div class="article-body">
+                <h2>次世代エンタープライズソリューションの開発</h2>
+                <p>タナベテックシステム開発会社（TTS Corporation）は、2026年8月より新たなエンタープライズ向けクラウドサービス群の開発フェーズへ本格移行したことをお知らせいたします。</p>
+                <p>当社がこれまで培ってきたAIアシスタント機能と、高度なセキュリティ環境を融合させた新しいソリューションは、企業のDX（デジタルトランスフォーメーション）を強力に後押しします。</p>
+                
+                <h2>開発の背景と目的</h2>
+                <p>現在の市場において、業務効率化とセキュリティの両立は最も重要な課題の一つです。当社の新サービスは、社内データを安全な環境で学習し、各部署の専門知識を備えた複数のAIエージェントが協調して業務を遂行する全く新しいアプローチを提供します。</p>
+                
+                <p>詳細な機能やリリース日程につきましては、決定次第、当ニュースルームにて順次発表してまいります。</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p class="footer-text">&copy; 2026 TTS Corporation. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
