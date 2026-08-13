@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primary: #e3000f; /* トヨタ風のコーポレートレッド */
+            --color-primary: #e3000f;
             --color-text: #333333;
             --color-text-light: #777777;
             --color-bg: #ffffff;
@@ -15,199 +15,56 @@
             --color-border: #e0e0e0;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; }
 
         /* Header */
-        header {
-            border-bottom: 2px solid var(--color-primary);
-            padding: 0;
-            background: #fff;
-        }
-
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #000;
-            text-decoration: none;
-            letter-spacing: 0.05em;
-        }
-
-        .logo span {
-            color: var(--color-primary);
-        }
-
-        .global-nav {
-            display: flex;
-            gap: 2rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .global-nav a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .global-nav a:hover {
-            color: var(--color-primary);
-        }
+        header { border-bottom: 2px solid var(--color-primary); padding: 0; background: #fff; }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #000; text-decoration: none; letter-spacing: 0.05em; }
+        .logo span { color: var(--color-primary); }
+        .global-nav { display: flex; gap: 2rem; font-size: 0.9rem; font-weight: 500; }
+        .global-nav a { color: #000; text-decoration: none; }
+        .global-nav a:hover { color: var(--color-primary); }
 
         /* Page Title */
-        .page-header {
-            background-color: var(--color-bg-gray);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .page-header h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .page-header p {
-            color: var(--color-text-light);
-            font-size: 1rem;
-        }
+        .page-header { background-color: var(--color-bg-gray); padding: 3rem 2rem; text-align: center; border-bottom: 1px solid var(--color-border); }
+        .page-header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .page-header p { color: var(--color-text-light); font-size: 1rem; }
 
         /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            border-left: 5px solid var(--color-primary);
-            padding-left: 1rem;
-        }
+        main { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; border-left: 5px solid var(--color-primary); padding-left: 1rem; }
 
         /* News Grid */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .news-card {
-            background: #fff;
-            border: 1px solid var(--color-border);
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .news-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .news-image {
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-            background: #eee;
-        }
-
-        .news-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .news-card:hover .news-image img {
-            transform: scale(1.05);
-        }
-
-        .news-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .news-meta {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 0.8rem;
-            font-size: 0.85rem;
-        }
-
-        .news-date {
-            color: var(--color-text-light);
-        }
-
-        .news-category {
-            background: #000;
-            color: #fff;
-            padding: 0.2rem 0.5rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-        }
-
-        .news-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+        .news-card { background: #fff; border: 1px solid var(--color-border); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: box-shadow 0.3s ease; }
+        .news-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .news-image { width: 100%; height: 200px; overflow: hidden; background: #eee; }
+        .news-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .news-card:hover .news-image img { transform: scale(1.05); }
+        .news-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .news-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; font-size: 0.85rem; }
+        .news-date { color: var(--color-text-light); }
+        .news-category { background: #000; color: #fff; padding: 0.2rem 0.5rem; font-size: 0.75rem; font-weight: 700; }
+        .news-title { font-size: 1.1rem; font-weight: 700; line-height: 1.5; margin-bottom: 1rem; }
 
         /* Footer */
-        footer {
-            background: #f1f1f1;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid var(--color-border);
-        }
+        footer { background: #f1f1f1; padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--color-border); }
+        .footer-text { color: var(--color-text-light); font-size: 0.85rem; }
 
-        .footer-text {
-            color: var(--color-text-light);
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 768px) {
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 768px) { .news-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <header>
         <div class="header-inner">
-            <a href="#" class="logo">TTS <span>CORPORATION</span></a>
+            <a href="index.html" class="logo">TTS <span>CORPORATION</span></a>
             <div class="global-nav">
-                <a href="#">企業情報</a>
-                <a href="#">投資家情報</a>
+                <a href="company.html">企業情報</a>
+                <a href="#">商品・サービス</a>
                 <a href="#">サステナビリティ</a>
-                <a href="#">ニュースルーム</a>
+                <a href="index.html">ニュースルーム</a>
             </div>
         </div>
     </header>
@@ -223,18 +80,17 @@
         <div class="news-grid">
             <a href="#" class="news-card">
                 <div class="news-image">
-                    <img src="./images/eyecatch_nanobanana2_corporate.jpg" alt="ニュース画像">
+                    <img src="./images/eyecatch_female_pr.jpg" alt="広報担当者からのメッセージ">
                 </div>
                 <div class="news-content">
                     <div class="news-meta">
                         <span class="news-date">2026年8月13日</span>
                         <span class="news-category">コーポレート</span>
                     </div>
-                    <h3 class="news-title">次世代広報プラットフォームの自律運用PoCを開始。CloudflareとAIを統合</h3>
+                    <h3 class="news-title">次世代広報プラットフォームの自律運用PoCを開始。皆様へのお約束</h3>
                 </div>
             </a>
             
-            <!-- モック用のダミーカード -->
             <a href="#" class="news-card">
                 <div class="news-image">
                     <div style="width:100%; height:100%; background:#ddd; display:flex; align-items:center; justify-content:center; color:#999;">No Image</div>
@@ -255,9 +111,9 @@
                 <div class="news-content">
                     <div class="news-meta">
                         <span class="news-date">2026年8月5日</span>
-                        <span class="news-category">IR情報</span>
+                        <span class="news-category">コーポレート</span>
                     </div>
-                    <h3 class="news-title">2026年度 第1四半期決算の発表について</h3>
+                    <h3 class="news-title">広報自動化機能のベータテストについて</h3>
                 </div>
             </a>
         </div>

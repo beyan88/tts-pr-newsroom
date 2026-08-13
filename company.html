@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企業情報 | TTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #e3000f;
+            --color-text: #333333;
+            --color-text-light: #777777;
+            --color-bg: #ffffff;
+            --color-bg-gray: #f8f8f8;
+            --color-border: #e0e0e0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; }
+        
+        /* Header */
+        header { border-bottom: 2px solid var(--color-primary); padding: 0; background: #fff; }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #000; text-decoration: none; letter-spacing: 0.05em; }
+        .logo span { color: var(--color-primary); }
+        .global-nav { display: flex; gap: 2rem; font-size: 0.9rem; font-weight: 500; }
+        .global-nav a { color: #000; text-decoration: none; }
+        .global-nav a:hover { color: var(--color-primary); }
+
+        /* Page Title */
+        .page-header { background-color: var(--color-bg-gray); padding: 3rem 2rem; text-align: center; border-bottom: 1px solid var(--color-border); }
+        .page-header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+
+        /* Main Content */
+        main { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; border-left: 5px solid var(--color-primary); padding-left: 1rem; }
+        
+        .company-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+        .company-table th, .company-table td { padding: 1rem; border-bottom: 1px solid var(--color-border); text-align: left; }
+        .company-table th { width: 30%; background-color: var(--color-bg-gray); font-weight: 700; }
+
+        /* Footer */
+        footer { background: #f1f1f1; padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--color-border); }
+        .footer-text { color: var(--color-text-light); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">TTS <span>CORPORATION</span></a>
+            <div class="global-nav">
+                <a href="company.html">企業情報</a>
+                <a href="#">商品・サービス</a>
+                <a href="#">サステナビリティ</a>
+                <a href="index.html">ニュースルーム</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>企業情報</h1>
+    </div>
+
+    <main>
+        <h2 class="section-title">会社概要</h2>
+        
+        <table class="company-table">
+            <tbody>
+                <tr>
+                    <th>会社名</th>
+                    <td>タナベテックシステム開発会社（TTS Corporation）</td>
+                </tr>
+                <tr>
+                    <th>設立</th>
+                    <td>2014年4月</td>
+                </tr>
+                <tr>
+                    <th>事業内容</th>
+                    <td>次世代AIプラットフォームの開発・運用、広報自動化システムの提供、システムコンサルティング事業</td>
+                </tr>
+                <tr>
+                    <th>代表者</th>
+                    <td>代表取締役社長 田辺</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p class="footer-text">&copy; 2026 TTS Corporation. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
