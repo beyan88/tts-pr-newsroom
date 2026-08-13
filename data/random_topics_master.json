@@ -1,0 +1,38 @@
+[
+    {
+        "id": "ai-trend-2026",
+        "title": "2026年最新AIモデルがもたらすビジネスプロセスの劇的進化",
+        "category": "コーポレート",
+        "category_code": "corporate",
+        "summary": "マルチモーダルAIと自律型エージェントの進化により、従来の業務フローがどのように変容するかを考察したエンジニアリングコラム。",
+        "keywords": "AIトレンド, 自律型エージェント, マルチモーダルAI, 業務改革",
+        "image_prompt": "A natural, high quality photograph of a modern futuristic desk in Japan with laptop, AI code on screen, soft morning light, professional photography, NO TEXT, NO LOGOS"
+    },
+    {
+        "id": "remote-productivity-tips",
+        "title": "エンジニアが実践するリモートワークでの集中力維持と環境構築術",
+        "category": "コーポレート",
+        "category_code": "corporate",
+        "summary": "デュアルモニター配置、ノイズキャンセリング、タスクの可視化による生産性極大化のノウハウをご紹介。",
+        "keywords": "リモートワーク, 生産性向上, 開発環境, ディスプレイ配置",
+        "image_prompt": "A natural, clean photograph of a quiet, ergonomic home office desk setup with dual monitors and warm coffee cup, professional photography, NO TEXT, NO LOGOS"
+    },
+    {
+        "id": "green-it-practice",
+        "title": "サーバー維持費0円基盤が貢献する「省電力グリーンIT」の現場",
+        "category": "サステナビリティ",
+        "category_code": "sustainability",
+        "summary": "クラウドエッジサーバー活用によって従来の常時稼働サーバー電力を削減し、環境負荷軽減と超高速表示を両立する取り組み。",
+        "keywords": "グリーンIT, 省エネ, サステナビリティ, Cloudflareエッジ",
+        "image_prompt": "A natural, beautiful photograph of a green plant next to a modern laptop displaying clean code and eco architecture diagram, soft natural lighting, NO TEXT, NO LOGOS"
+    },
+    {
+        "id": "error-handling-philosophy",
+        "title": "開発現場における「エラー対応3ステップ」とナレッジ共有の重要性",
+        "category": "コーポレート",
+        "category_code": "corporate",
+        "summary": "止まる・読む・直すの基本原則を徹底し、失敗を組織の資産へと変えるトラブルシューティングの思考法。",
+        "keywords": "トラブルシューティング, ナレッジ共有, 開発の心得, 品質管理",
+        "image_prompt": "A natural, focused photograph of a Japanese software architect analyzing code logs on screen with notebook and pen, quiet office, NO TEXT, NO LOGOS"
+    }
+]
