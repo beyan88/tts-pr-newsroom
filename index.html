@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS 広報ニュースルーム (PoC)</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        header { background-color: #1a1a1a; color: #fff; padding: 1.5rem; text-align: center; }
+        main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .article-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; margin-bottom: 2rem; }
+        .article-card img { width: 100%; height: auto; display: block; }
+        .article-content { padding: 1.5rem; }
+        .article-date { color: #666; font-size: 0.9rem; margin-bottom: 0.5rem; display: block; }
+        h2 { margin-top: 0; color: #222; }
+        p { line-height: 1.6; color: #444; }
+        footer { text-align: center; padding: 2rem; color: #777; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TTS Newsroom (Cloudflare PoC)</h1>
+        <p>自動配信・検証プレビュー</p>
+    </header>
+    <main>
+        <div class="article-card">
+            <!-- 画像はPoC実行時に自動生成されたものを配置します -->
+            <img src="./images/eyecatch_ai_automation.png" alt="AI Automation">
+            <div class="article-content">
+                <span class="article-date">2026年8月13日</span>
+                <h2>広報活動の完全自律運用PoCがスタート</h2>
+                <p>TTS社において、AI組織（調査部・営業部・デザイン部・監査役）が自律連携し、記事の作成から画像生成、品質監査を経てCloudflareへ自動配信されるパイプラインの検証を開始しました。</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2026 TTS Inc. All rights reserved.
+    </footer>
+</body>
+</html>
