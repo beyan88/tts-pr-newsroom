@@ -9,8 +9,8 @@ except ImportError:
     print("Error: google-genai package is not installed.")
     sys.exit(1)
 
-DEFAULT_COCONALA_URL = "https://coconala.com/users/668648"
-DEFAULT_LANCERS_URL = "https://www.lancers.jp/profile/hirotanabe"
+DEFAULT_COCONALA_PROFILE = "https://coconala.com/users/668648"
+DEFAULT_LANCERS_PROFILE = "https://www.lancers.jp/profile/hirotanabe"
 
 def load_json(filepath):
     if not os.path.exists(filepath):
@@ -43,9 +43,23 @@ def create_detail_html(service, news_num, date_str):
     filename = f"news-{news_num}.html"
     image_filename = f"images/news{news_num}_natural.jpg"
     
-    # 個別サービスURLが指定されていれば優先使用、無ければデフォルトプロフィールページへ自動フォールバック
-    coconala_target = service.get('coconala_url') or DEFAULT_COCONALA_URL
-    lancers_target = service.get('lancers_url') or DEFAULT_LANCERS_URL
+    # サービスリンクありきの動的ボタン生成ロジック
+    coconala_url = service.get('coconala_url')
+    lancers_url = service.get('lancers_url')
+
+    if coconala_url:
+        coconala_btn_label = "ココナラでこのサービスを発注・相談"
+        coconala_href = coconala_url
+    else:
+        coconala_btn_label = "ココナラ公式ページでご相談"
+        coconala_href = DEFAULT_COCONALA_PROFILE
+
+    if lancers_url:
+        lancers_btn_label = "ランサーズでこのサービスを発注・相談"
+        lancers_href = lancers_url
+    else:
+        lancers_btn_label = "ランサーズ公式ページでご相談"
+        lancers_href = DEFAULT_LANCERS_PROFILE
 
     html_content = f"""<!DOCTYPE html>
 <html lang="ja">
@@ -156,8 +170,8 @@ def create_detail_html(service, news_num, date_str):
                 <h3>{service['title']} のご発注・ご相談</h3>
                 <p>本サービスの受託・ツール導入に関するご発注やご相談は、ココナラおよびランサーズの田辺広徳（TTS）公式ページにて承っております。お気軽にお問い合わせください。</p>
                 <div class="cta-buttons">
-                    <a href="{coconala_target}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-coconala">ココナラでこのサービスを発注・相談</a>
-                    <a href="{lancers_target}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-lancers">ランサーズでこのサービスを発注・相談</a>
+                    <a href="{coconala_href}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-coconala">{coconala_btn_label}</a>
+                    <a href="{lancers_href}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-lancers">{lancers_btn_label}</a>
                 </div>
             </div>
         </article>
@@ -216,13 +230,13 @@ def main():
     unposted = [s for s in services if s['id'] not in posted_ids]
 
     if not unposted:
-        print("All services have been posted. Refreshing posted queue...")
+        print("All specific service URLs have been posted. Resetting posted queue for new cycle...")
         posted = []
         posted_ids = []
         unposted = services
 
     selected_service = unposted[0]
-    print(f"Selected Service to Post: {selected_service['title']} (ID: {selected_service['id']})")
+    print(f"Selected Service to Post (URL-driven): {selected_service['title']} (ID: {selected_service['id']})")
 
     news_num = 6 + len(posted)
     date_str = datetime.date.today().strftime("%Y年%m月%d日")
@@ -237,15 +251,17 @@ def main():
     # 3. トップページ更新
     update_index_html(selected_service, news_num, date_str)
 
-    # 4. 履歴保存
+    # 4. 履歴保存 (特定サービスID & URLの完全重複防止)
     posted.append({
         "id": selected_service['id'],
+        "coconala_url": selected_service.get('coconala_url'),
+        "lancers_url": selected_service.get('lancers_url'),
         "posted_at": date_str,
         "news_file": f"news-{news_num}.html"
     })
     save_json(posted_path, posted)
 
-    print("Monday Auto-Publisher execution completed successfully!")
+    print("Monday Auto-Publisher (URL-driven deduplication) completed successfully!")
 
 if __name__ == "__main__":
     main()

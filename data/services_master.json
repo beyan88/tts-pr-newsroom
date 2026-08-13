@@ -1,36 +1,36 @@
 [
     {
-        "id": "ec-automation",
-        "title": "EC・オンラインショップ運用自動化システム開発",
+        "id": "coconala-1991922",
+        "title": "Python等によるWebスクレイピング＆データ自動抽出・業務自動化ツール開発",
         "category": "商品・サービス",
         "category_code": "products",
-        "summary": "商品データの一括登録、在庫・価格の自動同期、受注処理の省力化を実現するEC特化型自動化ツール開発サービス。",
-        "keywords": "EC自動化, オンラインショップ自動化, 商品登録自動化, 在庫同期",
-        "image_prompt": "A natural, realistic photograph of a modern e-commerce operations office in Japan, computers displaying online shop dashboard and automation workflow, clean professional setting, NO TEXT, NO LOGOS",
-        "coconala_url": "https://coconala.com/services/1991922",
-        "lancers_url": "https://www.lancers.jp/profile/hirotanabe"
-    },
-    {
-        "id": "python-automation",
-        "title": "Pythonスクレイピング ＆ 業務自動化プログラム構築",
-        "category": "商品・サービス",
-        "category_code": "products",
-        "summary": "Webサイトからのデータ自動抽出、Excel/CSV集計の自動化、定型タスクをワンクリックで完結させるカスタムPythonツール。",
-        "keywords": "Python開発, Webスクレイピング, 業務自動化, Excel自動化",
+        "summary": "Webサイトからのデータ自動収集、Excel/CSVの集計・加工、定型作業をワンクリックで自動化するPythonカスタムプログラム構築サービス。",
+        "keywords": "Python開発, Webスクレイピング, 業務自動化, データ抽出, ココナラ 1991922",
         "image_prompt": "A natural, realistic photograph of a professional Japanese developer coding Python automation scripts on dual monitors, modern quiet office, high quality photography, NO TEXT, NO LOGOS",
         "coconala_url": "https://coconala.com/services/1991922",
-        "lancers_url": "https://www.lancers.jp/profile/hirotanabe"
+        "lancers_url": null
     },
     {
-        "id": "ai-agent-system",
+        "id": "ec-operations-automation",
+        "title": "EC・オンラインショップ運用自動化システム構築",
+        "category": "商品・サービス",
+        "category_code": "products",
+        "summary": "商品の一括登録、在庫・価格の自動同期、受注データの自動処理を実現し、ネットショップ運用の人的コストを大幅削減する自動化ツール。",
+        "keywords": "EC自動化, オンラインショップ自動化, 商品登録自動化, 在庫同期",
+        "image_prompt": "A natural, realistic photograph of a modern e-commerce operations office in Japan, computers displaying online shop dashboard and automation workflow, clean professional setting, NO TEXT, NO LOGOS",
+        "coconala_url": null,
+        "lancers_url": null
+    },
+    {
+        "id": "ai-agent-development",
         "title": "社内業務特化型 AIエージェント ＆ チャットボット構築",
         "category": "商品・サービス",
         "category_code": "products",
         "summary": "自社データやマニュアルを学習させ、問い合わせ対応や資料作成をアシストする社内専用AIエージェントシステムの構築。",
         "keywords": "AIエージェント, チャットボット構築, 社内AI活用, 業務効率化AI",
         "image_prompt": "A natural, realistic photograph of a Japanese corporate team collaborating with an interactive AI assistant system on screen, bright office, professional photography, NO TEXT, NO LOGOS",
-        "coconala_url": "https://coconala.com/users/668648",
-        "lancers_url": "https://www.lancers.jp/profile/hirotanabe"
+        "coconala_url": null,
+        "lancers_url": null
     },
     {
         "id": "cloudflare-fast-web",
@@ -40,7 +40,7 @@
         "summary": "WordPress等の重いサーバー不要。サーバー維持費ゼロで世界最高峰の表示速度と強固なセキュリティを誇るWeb基盤。",
         "keywords": "Cloudflare Pages, 維持費0円Web制作, 超高速Webサイト, セキュリティ強化",
         "image_prompt": "A natural, realistic photograph of a modern high-speed cloud infrastructure concept in a sleek Japanese tech firm, glowing subtle network light, professional photography, NO TEXT, NO LOGOS",
-        "coconala_url": "https://coconala.com/users/668648",
-        "lancers_url": "https://www.lancers.jp/profile/hirotanabe"
+        "coconala_url": null,
+        "lancers_url": null
     }
 ]
