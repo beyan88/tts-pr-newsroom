@@ -1,13 +1,7 @@
-Selected Service to Post (URL-driven): 社内業務特化型 AIエージェント ＆ チャットボット構築 (ID: ai-agent-development)
+Selected Service to Post (URL-driven): EC・オンラインショップ運用自動化システム構築 (ID: ec-operations-automation)
 Generating image via Nano Banana API (gemini-3.1-flash-lite-image)...
-Prompt: A natural, realistic photograph of a Japanese corporate team collaborating with an interactive AI assistant system on screen, bright office, professional photography, NO TEXT, NO LOGOS
+Prompt: A natural, realistic photograph of a modern e-commerce operations office in Japan, computers displaying online shop dashboard and automation workflow, clean professional setting, NO TEXT, NO LOGOS
 Success! Image saved to images/news8_natural.jpg
 Created news-8.html
 Updated index.html with new service card.
 Monday Auto-Publisher (URL-driven deduplication) completed successfully!
-[main 1e53216] auto: Monday scheduled service publication
- 5 files changed, 145 insertions(+), 5 deletions(-)
- create mode 100644 images/news8_natural.jpg
- create mode 100644 news-8.html
-To https://github.com/beyan88/tts-pr-newsroom.git
-   331e378..1e53216  main -> main
