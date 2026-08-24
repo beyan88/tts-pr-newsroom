@@ -1,11 +1,7 @@
-Selected Service to Post (URL-driven): EC・オンラインショップ運用自動化システム構築 (ID: ec-operations-automation)
+Selected Service to Post (URL-driven): 月額維持費0円 ＆ 超高速Cloudflare Pages基盤サイト構築 (ID: cloudflare-fast-web)
 Generating image via Nano Banana API (gemini-3.1-flash-lite-image)...
-Prompt: A natural, realistic photograph of a modern e-commerce operations office in Japan, computers displaying online shop dashboard and automation workflow, clean professional setting, NO TEXT, NO LOGOS
-Success! Image saved to images/news8_natural.jpg
-Created news-8.html
+Prompt: A natural, realistic photograph of a modern high-speed cloud infrastructure concept in a sleek Japanese tech firm, glowing subtle network light, professional photography, NO TEXT, NO LOGOS
+Success! Image saved to images/news9_natural.jpg
+Created news-9.html
 Updated index.html with new service card.
 Monday Auto-Publisher (URL-driven deduplication) completed successfully!
-[main ba34b60] auto: Monday scheduled service publication
- 5 files changed, 33 insertions(+), 20 deletions(-)
-To https://github.com/beyan88/tts-pr-newsroom.git
-   bd87862..ba34b60  main -> main
