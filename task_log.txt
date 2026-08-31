@@ -1,11 +1,8 @@
-Selected Service to Post (URL-driven): 月額維持費0円 ＆ 超高速Cloudflare Pages基盤サイト構築 (ID: cloudflare-fast-web)
+All specific service URLs have been posted. Resetting posted queue for new cycle...
+Selected Service to Post (URL-driven): Python等によるWebスクレイピング＆データ自動抽出・業務自動化ツール開発 (ID: coconala-1991922)
 Generating image via Nano Banana API (gemini-3.1-flash-lite-image)...
-Prompt: A natural, realistic photograph of a modern high-speed cloud infrastructure concept in a sleek Japanese tech firm, glowing subtle network light, professional photography, NO TEXT, NO LOGOS
-Success! Image saved to images/news9_natural.jpg
-Created news-9.html
+Prompt: A natural, realistic photograph of a professional Japanese developer coding Python automation scripts on dual monitors, modern quiet office, high quality photography, NO TEXT, NO LOGOS
+Success! Image saved to images/news6_natural.jpg
+Created news-6.html
 Updated index.html with new service card.
 Monday Auto-Publisher (URL-driven deduplication) completed successfully!
-[main 05354fb] auto: Monday scheduled service publication
- 5 files changed, 44 insertions(+), 29 deletions(-)
-To https://github.com/beyan88/tts-pr-newsroom.git
-   b2f545e..05354fb  main -> main
