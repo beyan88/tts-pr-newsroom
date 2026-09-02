@@ -13,5 +13,10 @@
         "id": "green-it-practice",
         "posted_at": "2026年08月26日",
         "news_file": "news-11.html"
+    },
+    {
+        "id": "error-handling-philosophy",
+        "posted_at": "2026年09月02日",
+        "news_file": "news-12.html"
     }
 ]
