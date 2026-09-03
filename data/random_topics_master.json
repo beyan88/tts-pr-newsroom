@@ -4,35 +4,59 @@
         "title": "2026年最新AIモデルがもたらすビジネスプロセスの劇的進化",
         "category": "コーポレート",
         "category_code": "corporate",
+        "style_type": "minimal_3d",
         "summary": "マルチモーダルAIと自律型エージェントの進化により、従来の業務フローがどのように変容するかを考察したエンジニアリングコラム。",
         "keywords": "AIトレンド, 自律型エージェント, マルチモーダルAI, 業務改革",
-        "image_prompt": "A natural, high quality photograph of a modern futuristic desk in Japan with laptop, AI code on screen, soft morning light, professional photography, NO TEXT, NO LOGOS"
+        "image_prompt": "A sleek, elegant 3D minimal conceptual render, smooth matte clay and frosted glass geometric shapes connecting harmoniously in space, clean modern tech aesthetic, soft ambient studio lighting, minimalist white and warm neutral tones with subtle red accents, 8k resolution, NO TEXT, NO LOGOS"
     },
     {
         "id": "remote-productivity-tips",
         "title": "エンジニアが実践するリモートワークでの集中力維持と環境構築術",
         "category": "コーポレート",
         "category_code": "corporate",
+        "style_type": "lifestyle",
         "summary": "デュアルモニター配置、ノイズキャンセリング、タスクの可視化による生産性極大化のノウハウをご紹介。",
         "keywords": "リモートワーク, 生産性向上, 開発環境, ディスプレイ配置",
-        "image_prompt": "A natural, clean photograph of a quiet, ergonomic home office desk setup with dual monitors and warm coffee cup, professional photography, NO TEXT, NO LOGOS"
+        "image_prompt": "Warm cinematic lifestyle photography of a serene wooden desk beside a sunlit window, a steaming ceramic mug of coffee, an open blank notebook with a fountain pen, a small green succulent potted plant, soft morning sunlight casting gentle shadows, cozy aesthetic, shallow depth of field, professional photography, NO TEXT, NO LOGOS"
+    },
+    {
+        "id": "work-life-automation",
+        "title": "自動化がもたらす「時間の余白」と持続可能なワークスタイル",
+        "category": "サステナビリティ",
+        "category_code": "sustainability",
+        "style_type": "benefit",
+        "summary": "単なる時短にとどまらず、反復業務を自律化することで生まれる精神的ゆとりとクリエイティブな挑戦について。",
+        "keywords": "業務効率化, 働き方改革, 時間のゆとり, 持続可能性",
+        "image_prompt": "A refreshing, cinematic photograph of a relaxed professional walking leisurely on a modern open rooftop terrace at golden hour sunset after finishing work, feeling of freedom and balance, warm golden sunlight, beautiful horizon, shallow depth of field, NO TEXT, NO LOGOS"
     },
     {
         "id": "green-it-practice",
         "title": "サーバー維持費0円基盤が貢献する「省電力グリーンIT」の現場",
         "category": "サステナビリティ",
         "category_code": "sustainability",
+        "style_type": "lifestyle",
         "summary": "クラウドエッジサーバー活用によって従来の常時稼働サーバー電力を削減し、環境負荷軽減と超高速表示を両立する取り組み。",
         "keywords": "グリーンIT, 省エネ, サステナビリティ, Cloudflareエッジ",
-        "image_prompt": "A natural, beautiful photograph of a green plant next to a modern laptop displaying clean code and eco architecture diagram, soft natural lighting, NO TEXT, NO LOGOS"
+        "image_prompt": "A warm, natural lifestyle photograph of a bright minimalist interior with large lush green potted plants, soft natural daylight flooding through sheer curtains, clean sustainable living aesthetic, high quality photography, NO TEXT, NO LOGOS"
+    },
+    {
+        "id": "cloud-edge-architecture",
+        "title": "超高速エッジコンピューティングが変えるWebサービスの未来",
+        "category": "コーポレート",
+        "category_code": "corporate",
+        "style_type": "minimal_3d",
+        "summary": "世界各地のエッジロケーションからコンテンツを瞬時に配信するモダンアーキテクチャの優位性を解説。",
+        "keywords": "エッジコンピューティング, Cloudflare, Webアーキテクチャ, 超高速配信",
+        "image_prompt": "A refined 3D abstract minimal rendering of interconnected glowing crystalline rings and frosted glass spheres floating gracefully, soft clean lighting, elegant neutral grey and soft amber tones, futuristic concept art, 8k resolution, NO TEXT, NO LOGOS"
     },
     {
         "id": "error-handling-philosophy",
         "title": "開発現場における「エラー対応3ステップ」とナレッジ共有の重要性",
         "category": "コーポレート",
         "category_code": "corporate",
+        "style_type": "lifestyle_focus",
         "summary": "止まる・読む・直すの基本原則を徹底し、失敗を組織の資産へと変えるトラブルシューティングの思考法。",
         "keywords": "トラブルシューティング, ナレッジ共有, 開発の心得, 品質管理",
-        "image_prompt": "A natural, focused photograph of a Japanese software architect analyzing code logs on screen with notebook and pen, quiet office, NO TEXT, NO LOGOS"
+        "image_prompt": "A calm, mindful photograph of handcrafted wooden geometric puzzle pieces neatly arranged on a natural oak table beside a pair of classic spectacles and a ceramic cup, soft daylight, quiet thoughtful atmosphere, NO TEXT, NO LOGOS"
     }
 ]

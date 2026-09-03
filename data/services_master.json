@@ -4,9 +4,10 @@
         "title": "Python等によるWebスクレイピング＆データ自動抽出・業務自動化ツール開発",
         "category": "商品・サービス",
         "category_code": "products",
+        "style_type": "lifestyle",
         "summary": "Webサイトからのデータ自動収集、Excel/CSVの集計・加工、定型作業をワンクリックで自動化するPythonカスタムプログラム構築サービス。",
         "keywords": "Python開発, Webスクレイピング, 業務自動化, データ抽出, ココナラ 1991922",
-        "image_prompt": "A natural, realistic photograph of a professional Japanese developer coding Python automation scripts on dual monitors, modern quiet office, high quality photography, NO TEXT, NO LOGOS",
+        "image_prompt": "Warm cinematic lifestyle photography of a tranquil, beautifully organized wooden desk with a ceramic coffee mug, fountain pen, and a closed slim laptop bathed in soft morning window light, peaceful productivity atmosphere, NO TEXT, NO LOGOS",
         "coconala_url": "https://coconala.com/services/1991922",
         "lancers_url": null
     },
@@ -15,9 +16,10 @@
         "title": "社内業務特化型 AIエージェント ＆ チャットボット構築",
         "category": "商品・サービス",
         "category_code": "products",
+        "style_type": "minimal_3d",
         "summary": "自社データやマニュアルを学習させ、問い合わせ対応や資料作成をアシストする社内専用AIエージェントシステムの構築。",
         "keywords": "AIエージェント, チャットボット構築, 社内AI活用, 業務効率化AI, ココナラ 4336433",
-        "image_prompt": "A natural, realistic photograph of a Japanese corporate team collaborating with an interactive AI assistant system on screen, bright office, professional photography, NO TEXT, NO LOGOS",
+        "image_prompt": "A sophisticated minimal 3D render of glowing interconnected translucent spheres and matte ceramic nodes communicating harmoniously, clean studio lighting, soft neutral grey and warm red accents, elegant high tech concept, 8k resolution, NO TEXT, NO LOGOS",
         "coconala_url": "https://coconala.com/services/4336433",
         "lancers_url": null
     },
@@ -26,9 +28,10 @@
         "title": "EC・オンラインショップ運用自動化システム構築",
         "category": "商品・サービス",
         "category_code": "products",
+        "style_type": "benefit",
         "summary": "商品の一括登録、在庫・価格の自動同期、受注データの自動処理を実現し、ネットショップ運用の人的コストを大幅削減する自動化ツール。",
         "keywords": "EC自動化, オンラインショップ自動化, 商品登録自動化, 在庫同期, ココナラ 1991922",
-        "image_prompt": "A natural, realistic photograph of a modern e-commerce operations office in Japan, computers displaying online shop dashboard and automation workflow, clean professional setting, NO TEXT, NO LOGOS",
+        "image_prompt": "An aesthetically pleasing, clean overhead flat-lay photograph of minimalist crafted packages tied with natural twine, soft daylight, fresh green botanical sprig, effortless e-commerce fulfillment concept, professional photography, NO TEXT, NO LOGOS",
         "coconala_url": "https://coconala.com/services/1991922",
         "lancers_url": null
     },
@@ -37,9 +40,10 @@
         "title": "月額維持費0円 ＆ 超高速Cloudflare Pages基盤サイト構築",
         "category": "商品・サービス",
         "category_code": "products",
+        "style_type": "minimal_3d",
         "summary": "WordPress等の重いサーバー不要。サーバー維持費ゼロで世界最高峰の表示速度と強固なセキュリティを誇るWeb基盤。",
         "keywords": "Cloudflare Pages, 維持費0円Web制作, 超高速Webサイト, セキュリティ強化",
-        "image_prompt": "A natural, realistic photograph of a modern high-speed cloud infrastructure concept in a sleek Japanese tech firm, glowing subtle network light, professional photography, NO TEXT, NO LOGOS",
+        "image_prompt": "A modern, elegant 3D architectural abstract render of ultra-light glass layers reflecting soft prism light, representing high-speed edge cloud networks, clean minimalist white and warm grey palette, premium studio lighting, NO TEXT, NO LOGOS",
         "coconala_url": "https://coconala.com/users/668648",
         "lancers_url": null
     }
