@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import datetime
+import re
 
 try:
     from google import genai
@@ -22,24 +23,67 @@ def save_json(filepath, data):
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-def generate_image(client, prompt, output_path):
-    print(f"Generating Wednesday topic image via Nano Banana API (gemini-3.1-flash-lite-image)...")
+import time
+
+def generate_image(client, prompt, output_path, max_retries=3):
+    print("Generating Wednesday topic illustration via Gemini Image API (gemini-3.1-flash-lite-image)...")
     print(f"Prompt: {prompt}")
-    response = client.models.generate_content(
-        model='gemini-3.1-flash-lite-image',
-        contents=prompt,
-    )
-    if response.candidates:
-        for part in response.candidates[0].content.parts:
-            if hasattr(part, 'inline_data') and part.inline_data:
-                with open(output_path, 'wb') as f:
-                    f.write(part.inline_data.data)
-                print(f"Success! Image saved to {output_path}")
-                return True
-    print("Failed to get image binary data.")
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = client.models.generate_content(
+                model='gemini-3.1-flash-lite-image',
+                contents=prompt,
+            )
+            if response.candidates:
+                for part in response.candidates[0].content.parts:
+                    if hasattr(part, 'inline_data') and part.inline_data:
+                        with open(output_path, 'wb') as f:
+                            f.write(part.inline_data.data)
+                        print(f"Success! Illustration saved to {output_path}")
+                        return True
+            print("Failed to get image binary data.")
+            return False
+        except Exception as e:
+            print(f"Attempt {attempt} failed: {e}")
+            if "429" in str(e) and attempt < max_retries:
+                print("Rate limited (429). Waiting 30 seconds before retry...")
+                time.sleep(30)
+            else:
+                raise e
     return False
 
-def create_detail_html(topic, news_num, date_str):
+def generate_column_article(client, topic):
+    print(f"Writing in-depth column article via Gemini 3.6 Flash for topic: {topic['title']}...")
+    prompt = f"""
+あなたはタナベテックシステム（TTS）のシニア技術コンサルタントです。
+企業の業務効率化やDX、Webサイト・システム運用、自動化に関心を持つ経営者・Web担当者に向けて、自社の水曜定期コラムを執筆してください。
+
+【テーマ】: {topic['title']}
+【要約・背景】: {topic['summary']}
+【キーワード】: {topic['keywords']}
+
+【執筆ルール】:
+1. 単なる辞書的な解説や一般論（「〜とは？」「メリット3選」のような機械的なまとめ）は厳禁です。
+2. 読者が「なるほど、現場で試してみよう」「読んでよかった」と心から感じる、共感と実用性に満ちたコラムにしてください。
+3. 以下の4つのセクション構成で、HTMLタグ（<h3>, <p>, <ul>, <li>, <strong>等）を用いて執筆してください。全体で1,200文字〜1,800文字程度の読み応えある構成にしてください。
+   - 【第1章】現場のリアルな課題・あるあるの悩み（現場で実際に起きている非効率、トラブル、ストレス、読者の痛みに深く寄り添う書き出し）
+   - 【第2章】なぜ従来の手法では躓くのか（従来の重いやり方、属人化、古いツールのボトルネックや運用の落とし穴を分析）
+   - 【第3章】プロはどう解決するのか（最新のテクノロジーやモダンアーキテクチャ、TTSが現場で実践しているアプローチ）
+   - 【第4章】明日から現場で実践できるワンアクション（読者が今週すぐに試せる具体的で小さな第一歩）
+4. 出力はHTMLの本文断片（章ごとの<h3>や<p>などのタグ）のみを出力してください。Markdownのコードブロック記法（```html や ```）は一切含めないでください。
+"""
+    response = client.models.generate_content(
+        model='gemini-3.6-flash',
+        contents=prompt
+    )
+    article_html = response.text.strip()
+    # 万が一Markdownコードブロックが含まれている場合は除去
+    article_html = re.sub(r'^```html\s*', '', article_html, flags=re.IGNORECASE)
+    article_html = re.sub(r'^```\s*', '', article_html)
+    article_html = re.sub(r'```$', '', article_html)
+    return article_html.strip()
+
+def create_detail_html(topic, news_num, date_str, body_html):
     filename = f"news-{news_num}.html"
     image_filename = f"images/news{news_num}_natural.jpg"
 
@@ -91,14 +135,18 @@ def create_detail_html(topic, news_num, date_str):
         .article-header {{ margin-bottom: 3rem; text-align: center; }}
         .article-meta {{ color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1rem; }}
         .article-title {{ font-size: 2rem; font-weight: 700; line-height: 1.4; margin-bottom: 2rem; }}
-        .article-image {{ width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 3rem; border-radius: 6px; }}
+        .article-image {{ width: 100%; max-height: 440px; object-fit: cover; margin-bottom: 3rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }}
         .article-body {{ font-size: 1.05rem; }}
-        .article-body h2 {{ font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--color-border); }}
-        .article-body p {{ margin-bottom: 1.5rem; }}
+        .article-body h2 {{ font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-border); }}
+        .article-body h3 {{ font-size: 1.25rem; font-weight: 700; margin: 2rem 0 0.8rem; color: #111827; border-left: 4px solid var(--color-primary); padding-left: 0.8rem; }}
+        .article-body p {{ margin-bottom: 1.5rem; text-align: justify; }}
+        .article-body ul, .article-body ol {{ margin: 1rem 0 1.5rem 1.5rem; }}
+        .article-body li {{ margin-bottom: 0.5rem; }}
+        .article-lead {{ font-size: 1.15rem; font-weight: 500; color: #4b5563; background: #f9fafb; border-left: 4px solid #9ca3af; padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; border-radius: 0 6px 6px 0; }}
 
         /* Article CTA Card */
         .article-cta {{ background: var(--color-bg-gray); border: 2px solid var(--color-border); border-left: 6px solid var(--color-primary); padding: 2rem; margin-top: 4rem; border-radius: 6px; }}
-        .article-cta h3 {{ font-size: 1.3rem; font-weight: 700; margin-bottom: 0.8rem; }}
+        .article-cta h3 {{ font-size: 1.3rem; font-weight: 700; margin-bottom: 0.8rem; border-left: none; padding-left: 0; color: var(--color-text); }}
         .article-cta p {{ font-size: 0.95rem; color: var(--color-text); margin-bottom: 1.5rem; line-height: 1.6; }}
         .cta-buttons {{ display: flex; gap: 1rem; flex-wrap: wrap; }}
         .cta-btn {{ display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.5rem; font-size: 0.95rem; font-weight: 700; text-decoration: none; border-radius: 4px; color: #fff; transition: opacity 0.2s ease; }}
@@ -135,22 +183,16 @@ def create_detail_html(topic, news_num, date_str):
             <img src="./{image_filename}" alt="{topic['title']}" class="article-image">
             
             <div class="article-body">
-                <h2>【水曜コラム】テクノロジーと現場をつなぐ実践思考</h2>
-                <p>タナベテックシステム開発会社（TTS Corporation）では、日々の開発現場や経営支援の中で得られた技術的知見やトレンド考察を「水曜コラム」として発信しております。</p>
-                <p>{topic['summary']}</p>
-                
-                <h2>背景と現場での応用アプローチ</h2>
-                <p><strong>1. 理論と現場運用の融合</strong><br>
-                最先端の技術トレンドを単なる知識にとどめず、実際の業務プロセスへ落とし込むことによって、初めて大きな価値が生まれます。</p>
-                
-                <p><strong>2. 継続的な改善と自動化の推進</strong><br>
-                小さな業務改善の積み重ねが、組織全体の大きな生産性向上へとつながります。</p>
+                <div class="article-lead">
+                    {topic['summary']}
+                </div>
+                {body_html}
             </div>
 
             <!-- CTA Card -->
             <div class="article-cta">
                 <h3>システム開発・IT業務自動化のご相談窓口</h3>
-                <p>タナベテックシステム（TTS）では、EC自動化・AIシステム構築・Pythonプログラム開発のご相談をココナラおよびランサーズの田辺広徳（TTS）公式ページにて承っております。</p>
+                <p>タナベテックシステム（TTS）では、EC自動化・AIシステム構築・Pythonプログラム開発・Cloudflare高速Web基盤構築のご相談をココナラおよびランサーズの田辺広徳（TTS）公式ページにて承っております。</p>
                 <div class="cta-buttons">
                     <a href="{DEFAULT_COCONALA_PROFILE}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-coconala">ココナラで相談する</a>
                     <a href="{DEFAULT_LANCERS_PROFILE}" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-lancers">ランサーズで相談する</a>
@@ -235,16 +277,19 @@ def main():
     date_str = datetime.date.today().strftime("%Y年%m月%d日")
     image_output_path = f"images/news{news_num}_natural.jpg"
 
-    # 1. 画像生成
+    # 1. モダンイラスト生成
     generate_image(client, selected_topic['image_prompt'], image_output_path)
 
-    # 2. 詳細ページ生成
-    create_detail_html(selected_topic, news_num, date_str)
+    # 2. 実践的コラム本文の動的執筆（Gemini 3.6 Flash）
+    body_html = generate_column_article(client, selected_topic)
 
-    # 3. トップページ更新
+    # 3. 詳細ページ生成
+    create_detail_html(selected_topic, news_num, date_str, body_html)
+
+    # 4. トップページ更新
     update_index_html(selected_topic, news_num, date_str)
 
-    # 4. 履歴保存
+    # 5. 履歴保存
     posted.append({
         "id": selected_topic['id'],
         "posted_at": date_str,
@@ -252,7 +297,7 @@ def main():
     })
     save_json(posted_path, posted)
 
-    print("Wednesday Auto-Publisher completed successfully!")
+    print("Wednesday Auto-Publisher completed successfully with illustrated article!")
 
 if __name__ == "__main__":
     main()

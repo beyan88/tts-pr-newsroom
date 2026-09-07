@@ -4,59 +4,53 @@
         "title": "2026年最新AIモデルがもたらすビジネスプロセスの劇的進化",
         "category": "コーポレート",
         "category_code": "corporate",
-        "style_type": "minimal_3d",
-        "summary": "マルチモーダルAIと自律型エージェントの進化により、従来の業務フローがどのように変容するかを考察したエンジニアリングコラム。",
+        "summary": "マルチモーダルAIと自律型エージェントの進化により、従来の業務フローがどのように変容するかを現場目線で紐解く実務コラム。",
         "keywords": "AIトレンド, 自律型エージェント, マルチモーダルAI, 業務改革",
-        "image_prompt": "A sophisticated 3D minimal conceptual render inspired by modern Japanese zen minimalism, smooth matte ceramic elements, light natural wood textures, and translucent frosted glass shapes floating in perfect harmony, subtle vermilion red accent, soft warm studio lighting, clean elegant tech aesthetic, 8k resolution, NO TEXT, NO LOGOS"
+        "image_prompt": "A modern, high-end corporate tech illustration representing 2026 next-generation AI agents optimizing business processes. Clean vector art, sleek isometric 3D composition, minimalist aesthetic inspired by Apple and Stripe marketing design. Vibrant glowing neon accents of warm amber, cyan, and deep purple set against an elegant dark slate gray background. Data flow streams, connected autonomous nodes, clean geometric icons. Sharp vector lines, high quality corporate graphics, NO photorealistic textures, NO realistic messy human faces, NO letters, NO words, NO text, NO logos, 16:9 aspect ratio."
     },
     {
         "id": "remote-productivity-tips",
         "title": "エンジニアが実践するリモートワークでの集中力維持と環境構築術",
         "category": "コーポレート",
         "category_code": "corporate",
-        "style_type": "lifestyle",
-        "summary": "デュアルモニター配置、ノイズキャンセリング、タスクの可視化による生産性極大化のノウハウをご紹介。",
+        "summary": "デュアルモニター配置、タスク可視化、集中を持続させる現場エンジニアのワークスペース設計ノウハウ。",
         "keywords": "リモートワーク, 生産性向上, 開発環境, ディスプレイ配置",
-        "image_prompt": "Warm cinematic photograph of a serene modern Japanese home office workspace by a bright window, a steaming ceramic mug of roasted green tea, an open planner notebook with a pen, a delicate small green potted plant, soft morning sunlight casting gentle shadows on natural oak wood, cozy clean Japanese aesthetic, shallow depth of field, professional photography, NO TEXT, NO LOGOS"
+        "image_prompt": "A modern, high-end corporate tech illustration representing an ultra-productive digital workspace and focus management. Clean vector art, sleek isometric 3D perspective, minimalist aesthetic inspired by Apple and Notion design. Glowing amber and cyan lighting accents on an elegant dark slate background, stylized dual monitor setup, clean digital workflow dashboard cards, geometric workspace elements. Sharp vector lines, premium aesthetic, NO photorealistic textures, NO realistic messy human faces, NO letters, NO words, NO text, NO logos, 16:9 aspect ratio."
     },
     {
         "id": "work-life-automation",
         "title": "自動化がもたらす「時間の余白」と持続可能なワークスタイル",
         "category": "サステナビリティ",
         "category_code": "sustainability",
-        "style_type": "benefit",
-        "summary": "単なる時短にとどまらず、反復業務を自律化することで生まれる精神的ゆとりとクリエイティブな挑戦について。",
+        "summary": "反復業務を自律化することで生まれる精神的ゆとりと、創造的事業にリソースを集中させる持続可能な組織づくり。",
         "keywords": "業務効率化, 働き方改革, 時間のゆとり, 持続可能性",
-        "image_prompt": "A refreshing, natural photograph of a relaxed Japanese business professional walking comfortably on a modern open terrace in Tokyo at golden hour sunset after finishing work, smiling gently, feeling of freedom and work-life balance, soft warm evening light, Tokyo cityscape softly blurred in background, authentic approachable Japanese person, NO TEXT, NO LOGOS"
+        "image_prompt": "A modern, high-end corporate tech illustration representing business automation creating free time and sustainable work-life balance. Clean vector art, isometric 3D composition, minimalist aesthetic inspired by Apple and Stripe. Glowing golden amber hourglass with digital gears transforming into soaring luminous birds, sleek geometric shapes on dark slate gray background. Sharp vector lines, premium corporate feel, NO photorealistic textures, NO realistic messy human faces, NO letters, NO words, NO text, NO logos, 16:9 aspect ratio."
     },
     {
         "id": "green-it-practice",
         "title": "サーバー維持費0円基盤が貢献する「省電力グリーンIT」の現場",
         "category": "サステナビリティ",
         "category_code": "sustainability",
-        "style_type": "lifestyle",
-        "summary": "クラウドエッジサーバー活用によって従来の常時稼働サーバー電力を削減し、環境負荷軽減と超高速表示を両立する取り組み。",
+        "summary": "クラウドエッジサーバー活用によって常時稼働サーバー電力を削減し、環境負荷軽減と超高速表示を両立する実践的アプローチ。",
         "keywords": "グリーンIT, 省エネ, サステナビリティ, Cloudflareエッジ",
-        "image_prompt": "A warm, peaceful photograph of a Japanese minimalist room overlooking a verdant Japanese courtyard garden, soft sunlight filtering through bamboo leaves, natural wooden floor, eco-friendly clean architecture, calm atmospheric photography, NO TEXT, NO LOGOS"
+        "image_prompt": "A modern, high-end corporate tech illustration representing eco-friendly green IT and low-energy edge computing. Clean vector art, sleek isometric 3D composition, minimalist aesthetic inspired by Apple and Stripe. Glowing emerald green and warm amber circuits harmonizing with stylized digital eco-leaves, clean server nodes, dark charcoal background. Sharp lines, elegant corporate presentation, NO photorealistic textures, NO realistic messy human faces, NO letters, NO words, NO text, NO logos, 16:9 aspect ratio."
     },
     {
         "id": "cloud-edge-architecture",
         "title": "超高速エッジコンピューティングが変えるWebサービスの未来",
         "category": "コーポレート",
         "category_code": "corporate",
-        "style_type": "minimal_3d",
-        "summary": "世界各地のエッジロケーションからコンテンツを瞬時に配信するモダンアーキテクチャの優位性を解説。",
+        "summary": "世界各地のエッジロケーションからコンテンツを瞬時に配信し、アクセス集中と表示遅延を根本解決する最新Webアーキテクチャ。",
         "keywords": "エッジコンピューティング, Cloudflare, Webアーキテクチャ, 超高速配信",
-        "image_prompt": "A refined 3D abstract minimal rendering inspired by modern Japanese architecture, slender warm wooden lattices and layered frosted glass panes glowing with soft light, serene and futuristic, clean balanced composition, 8k resolution, NO TEXT, NO LOGOS"
+        "image_prompt": "A modern, high-end corporate tech illustration representing lightning-fast global edge computing architecture. Clean vector art, sleek isometric 3D perspective, minimalist aesthetic inspired by Apple and Stripe. Stylized glowing globe with distributed edge node servers connected by high-speed luminous light paths in warm amber, electric cyan, and purple against a dark slate background. Sharp vector graphics, premium quality, NO photorealistic textures, NO realistic messy human faces, NO letters, NO words, NO text, NO logos, 16:9 aspect ratio."
     },
     {
         "id": "error-handling-philosophy",
         "title": "開発現場における「エラー対応3ステップ」とナレッジ共有の重要性",
         "category": "コーポレート",
         "category_code": "corporate",
-        "style_type": "lifestyle_focus",
-        "summary": "止まる・読む・直すの基本原則を徹底し、失敗を組織の資産へと変えるトラブルシューティングの思考法。",
+        "summary": "止まる・読む・直すの基本原則を徹底し、失敗をチームの資産へ昇華させる実践的トラブルシューティングの思考法。",
         "keywords": "トラブルシューティング, ナレッジ共有, 開発の心得, 品質管理",
-        "image_prompt": "A calm, mindful photograph of handcrafted Japanese wooden puzzle pieces neatly arranged on a natural oak table beside a ceramic teacup and a classic pen, soft gentle daylight, thoughtful and focused mood, NO TEXT, NO LOGOS"
+        "image_prompt": "A modern, high-end corporate tech illustration representing rigorous software quality control, error resolution, and collaborative knowledge base. Clean vector art, isometric 3D composition, minimalist aesthetic inspired by Apple design. Glowing amber checkmark shield protecting a crystalline code structure, connected knowledge nodes, dark slate gray background. Sharp vector lines, clean geometric layout, NO photorealistic textures, NO realistic messy human faces, NO letters, NO words, NO text, NO logos, 16:9 aspect ratio."
     }
 ]
