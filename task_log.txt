@@ -1,12 +1,7 @@
-All specific service URLs have been posted. Resetting posted queue for new cycle...
-Selected Service to Post (URL-driven): Python等によるWebスクレイピング＆データ自動抽出・業務自動化ツール開発 (ID: coconala-1991922)
+Selected Service to Post (URL-driven): 社内業務特化型 AIエージェント ＆ チャットボット構築 (ID: ai-agent-development)
 Generating image via Nano Banana API (gemini-3.1-flash-lite-image)...
-Prompt: A natural, realistic photograph of a professional Japanese developer coding Python automation scripts on dual monitors, modern quiet office, high quality photography, NO TEXT, NO LOGOS
-Success! Image saved to images/news6_natural.jpg
-Created news-6.html
+Prompt: A sophisticated 3D minimal conceptual render inspired by modern Japanese zen aesthetics, smooth matte ceramic elements and translucent frosted glass shapes floating in gentle harmony, subtle vermilion red accent, clean studio lighting, 8k resolution, NO TEXT, NO LOGOS
+Success! Image saved to images/news7_natural.jpg
+Created news-7.html
 Updated index.html with new service card.
 Monday Auto-Publisher (URL-driven deduplication) completed successfully!
-[main 9ff1a3d] auto: Monday scheduled service publication
- 5 files changed, 28 insertions(+), 40 deletions(-)
-To https://github.com/beyan88/tts-pr-newsroom.git
-   b10b24a..9ff1a3d  main -> main
