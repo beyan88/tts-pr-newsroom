@@ -1,7 +1,7 @@
-Selected Service to Post (URL-driven): EC・オンラインショップ運用自動化システム構築 (ID: ec-operations-automation)
+Selected Service to Post (URL-driven): 月額維持費0円 ＆ 超高速Cloudflare Pages基盤サイト構築 (ID: cloudflare-fast-web)
 Generating image via Nano Banana API (gemini-3.1-flash-lite-image)...
-Prompt: A modern, high-end corporate tech illustration representing e-commerce automation and inventory synchronization. Clean vector art, sleek isometric 3D perspective, minimalist aesthetic inspired by Apple and Stripe. Stylized digital shopping cart, inventory cubes connected by glowing amber and teal conduits, data sync loops, dark slate background. Sharp lines, high quality, NO photorealistic textures, NO realistic messy human faces, NO letters, NO words, NO text, NO logos, 16:9 aspect ratio.
-Success! Image saved to images/news8_natural.jpg
-Created news-8.html
+Prompt: A modern, high-end corporate tech illustration representing ultra-fast Cloudflare Pages web architecture. Clean vector art, sleek isometric 3D perspective, minimalist aesthetic inspired by Apple and Stripe. Stylized global cloud network with distributed edge nodes, amber and cyan high-speed data pathways, dark slate background. Sharp vector lines, premium quality, NO photorealistic textures, NO realistic messy human faces, NO letters, NO words, NO text, NO logos, 16:9 aspect ratio.
+Success! Image saved to images/news9_natural.jpg
+Created news-9.html
 Updated index.html with new service card.
 Monday Auto-Publisher (URL-driven deduplication) completed successfully!
