@@ -5,3 +5,9 @@ Success! Image saved to images/news9_natural.jpg
 Created news-9.html
 Updated index.html with new service card.
 Monday Auto-Publisher (URL-driven deduplication) completed successfully!
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+[main 80a02b1] auto: Monday scheduled service publication
+ 6 files changed, 42 insertions(+), 6 deletions(-)
+ create mode 100644 AGENTS.md
+To https://github.com/beyan88/tts-pr-newsroom.git
+   b692540..80a02b1  main -> main
